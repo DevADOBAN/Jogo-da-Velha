@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="message" id="message">É a vez do jogador X!</div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-times-circle"></i> Jogo da Velha <i class="fas fa-circle"></i></h1>
+            <div class="subtitle">Clique em uma célula para começar a jogar</div>
+        </header>
+        
+        <div class="game-info">
+            <div class="player-info player-x">
+                <div class="player-label">Jogador 1</div>
+                <div class="player-name active">X</div>
+            </div>
+            
+            <div class="player-info player-o">
+                <div class="player-label">Jogador 2</div>
+                <div class="player-name">O</div>
+            </div>
+        </div>
+        
+        <div class="game-board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="restart"><i class="fas fa-redo-alt"></i> Reiniciar Partida</button>
+            <button id="new-game"><i class="fas fa-plus-circle"></i> Novo Jogo</button>
+        </div>
+        
+        <div class="score-board">
+            <div class="score-title">Placar</div>
+            <div class="scores">
+                <div class="score-item">
+                    <div class="score-label">Vitórias (X)</div>
+                    <div class="score-value" id="score-x">0</div>
+                </div>
+                
+                <div class="score-item">
+                    <div class="score-label">Empates</div>
+                    <div class="score-value" id="score-tie">0</div>
+                </div>
+                
+                <div class="score-item">
+                    <div class="score-label">Vitórias (O)</div>
+                    <div class="score-value" id="score-o">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
